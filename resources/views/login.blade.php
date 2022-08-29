@@ -17,11 +17,16 @@
                     name="email"
                     id="email"
                     required >
+
+                    @error('email')
+                        <p class="text-red-600 text-xs mt-1">{{ $message }}</p>   
+                    @enderror
                 </div>
                 <div class="mb-6">
                     <label 
                     class="block mb-2 uppercase font-bold text-sm text-slate-50"
                     for="password"
+                    value="{{ old('email') }}"
                     >Email
                     </label>
 
@@ -31,6 +36,10 @@
                     name="password"
                     id="password"
                     required >
+
+                    @error('password')
+                        <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="mb-6">
                     <button type="submit"
