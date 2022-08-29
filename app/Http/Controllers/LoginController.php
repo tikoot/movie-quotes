@@ -11,6 +11,19 @@ class LoginController extends Controller
 
 	public function store()
 	{
-		return view('dashboard');
+		$attributes = request()->validate([
+			'email'    => 'required|email',
+			'password' => 'required',
+		]);
+
+		if (auth()->attempt($attributes))
+		{
+			session()->regenerate();
+
+			return view('dashboard');
+		}
+
+		return back()
+		->withErrors(['email' => 'Your provided credentials could not be verified.']);
 	}
 }
