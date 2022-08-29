@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('login', [LoginController::class, 'create'])->name('login');
+Route::post('dashboard', [LoginController::class, 'store'])->name('dashboard');
