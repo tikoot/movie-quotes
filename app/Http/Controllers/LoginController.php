@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePostRequest;
+use Illuminate\Contracts\View\View;
+
 class LoginController extends Controller
 {
-	public function create()
+	public function create(): View
 	{
 		return view('login');
 	}
 
-	public function store()
+	public function store(StorePostRequest $request)
 	{
-		$attributes = request()->validate([
-			'email'    => 'required|email',
-			'password' => 'required',
-		]);
+		$attributes = $request->validated();
 
 		if (auth()->attempt($attributes))
 		{
