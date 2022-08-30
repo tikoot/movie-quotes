@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AllMovieController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::get('login', [LoginController::class, 'create'])->name('login');
-Route::post('dashboard', [LoginController::class, 'store'])->name('dashboard');
+Route::post('user/dashboard', [LoginController::class, 'store'])->name('user.dashboard');
 
+Route::get('movie/dashboard', [AllMovieController::class, 'create'])->name('movie.dashboard');
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
