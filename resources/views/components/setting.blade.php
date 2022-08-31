@@ -11,13 +11,13 @@
                     <a href="/movie/dashboard">Movies</a>
                 </li>
                 <li class="my-6">
-                    <a href="/quotes">Quotes</a>
+                    <a href="/">Quotes</a>
                 </li>
                 <li class="my-6">
                     <a href="/movie/create">Add Movie</a>
                 </li>
                 <li class="my-6">
-                    <a href="/">Add Quote</a>
+                    <a href="/quote/add">Add Quote</a>
                 </li>
             </ul>
         </aside>
