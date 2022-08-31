@@ -4,12 +4,12 @@
         <form method="POST" action="/movie/store">
             @csrf
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="title.en">Movie Name (English)</label>
-                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title.en">
+                <label class="block mb-2  text-lg text-gray-700" for="title_en">Movie Name (English)</label>
+                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title_en" required>
             </div>
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="title.ka">Movie Name (Georgian)</label>
-                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title.ka">
+                <label class="block mb-2  text-lg text-gray-700" for="title_ka">Movie Name (Georgian)</label>
+                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title_ka" required>
             </div>
             <div class="my-8">
             <button type="submit"
