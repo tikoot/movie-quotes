@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::post('user/dashboard', [LoginController::class, 'store'])->name('user.das
 Route::get('movie/dashboard', [MovieController::class, 'index'])->name('movie.dashboard');
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
 Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store');
+
+Route::get('quote/add', [QuoteController::class, 'create'])->name('quote_add.create');
