@@ -1,14 +1,14 @@
 <x-layout>
     <x-header/>
     <x-setting heading="Add Movie">
-        <form method="POST" action="/admin/posts">
+        <form method="POST" action="/movie/store">
             @csrf
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="">Movie Name (English)</label>
+                <label class="block mb-2  text-lg text-gray-700" for="title.en">Movie Name (English)</label>
                 <input class="text-black text-lg p-2 w-full rounded" type="text" name="title.en">
             </div>
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="">Movie Name (Georgian)</label>
+                <label class="block mb-2  text-lg text-gray-700" for="title.ka">Movie Name (Georgian)</label>
                 <input class="text-black text-lg p-2 w-full rounded" type="text" name="title.ka">
             </div>
             <div class="my-8">

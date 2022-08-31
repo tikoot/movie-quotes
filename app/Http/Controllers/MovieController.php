@@ -10,4 +10,9 @@ class MovieController extends Controller
 	{
 		return view('create-movie');
 	}
+
+	public function store()
+	{
+		return view('dashboard');
+	}
 }
