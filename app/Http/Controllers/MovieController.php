@@ -13,6 +13,11 @@ class MovieController extends Controller
 		return view('create-movie');
 	}
 
+	public function index(): View
+	{
+		return view('dashboard');
+	}
+
 	public function store(StoreMovieRequest $request): View
 	{
 		$movie = new Movie();
