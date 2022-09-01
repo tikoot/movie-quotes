@@ -26,4 +26,4 @@ Route::get('movie/dashboard', [MovieController::class, 'index'])->name('movie.da
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
 Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store');
 
-Route::get('quote/add', [QuoteController::class, 'create'])->name('quote_add.create');
+Route::get('quote/create', [QuoteController::class, 'create'])->name('quote.create');
