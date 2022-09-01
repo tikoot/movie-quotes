@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::get('login', [LoginController::class, 'create'])->name('login');
-Route::post('user/dashboard', [LoginController::class, 'store'])->name('user.dashboard');
+Route::post('dashboard', [LoginController::class, 'store'])->name('user.dashboard');
 
-Route::get('movie/dashboard', [MovieController::class, 'index'])->name('movie.dashboard');
+Route::get('movie/show', [MovieController::class, 'show'])->name('movie.show');
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
 Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store');
 

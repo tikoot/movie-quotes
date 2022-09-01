@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
     </x-header>
-    <x-setting heading="Movies">
-    </x-setting>
+    <x-setting heading="Welcome Back!">
+        </x-setting>
 </x-layout>

@@ -8,7 +8,7 @@
         <aside class="flex-shrink-0">
             <ul>
                 <li class="my-6 pt-2">
-                    <a href="/movie/dashboard">Movies</a>
+                    <a href="/movie/show">Movies</a>
                 </li>
                 <li class="my-6">
                     <a href="/">Quotes</a>
@@ -23,7 +23,7 @@
         </aside>
 
         <main class="flex-1">
-            <div class="max-w-xl mx-auto">
+            <div class="max-w-3xl mx-auto">
             {{$slot}}
         </div>
         </main>

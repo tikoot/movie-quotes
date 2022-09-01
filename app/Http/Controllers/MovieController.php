@@ -13,9 +13,9 @@ class MovieController extends Controller
 		return view('create-movie');
 	}
 
-	public function index(): View
+	public function show(): View
 	{
-		return view('dashboard');
+		return view('show-movie');
 	}
 
 	public function store(StoreMovieRequest $request): View
@@ -25,6 +25,6 @@ class MovieController extends Controller
 		$movie->setTranslation('title', 'ka', $request->title_ka);
 		$movie->save();
 
-		return view('dashboard');
+		return view('show-movie');
 	}
 }
