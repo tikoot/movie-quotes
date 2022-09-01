@@ -27,6 +27,6 @@ class MovieController extends Controller
 		$movie->setTranslation('title', 'ka', $request->title_ka);
 		$movie->save();
 
-		return view('show-movie');
+		return view('create-movie');
 	}
 }
