@@ -9,9 +9,9 @@
               <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                 <table class="min-w-full divide-y divide-gray-300">
                   <tbody class="divide-y divide-gray-200 bg-white">
-                    
+                    @foreach($movies as $movie)
                     <tr>
-                      <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-black sm:pl-6">movie title</td>
+                      <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-black sm:pl-6">	{{ $movie->title }}</td>
                       <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                       </td>
@@ -19,7 +19,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Delete</a>
                       </td>
                     </tr>
-                    
+                    @endforeach
                   </tbody>
                 </table>
               </div>
