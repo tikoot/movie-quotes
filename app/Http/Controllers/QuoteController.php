@@ -24,6 +24,7 @@ class QuoteController extends Controller
 	{
 		$quote = new Quote();
 		$quote->movie_id = $request->movie_id;
+		$quote->user_id = auth()->user()->id;
 		$quote->setTranslation('quote', 'en', $request->quote_en);
 		$quote->setTranslation('quote', 'ka', $request->quote_ka);
 		$quote->save();
