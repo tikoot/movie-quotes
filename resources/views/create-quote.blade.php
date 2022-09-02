@@ -5,12 +5,12 @@
         <form method="POST" action="/quote/store">
             @csrf
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="title_en">Quote (English)</label>
-                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title_en" required>
+                <label class="block mb-2  text-lg text-gray-700" for="quote_en">Quote (English)</label>
+                <input class="text-black text-lg p-2 w-full rounded" type="text" name="quote_en" required>
             </div>
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="title_ka">Quote (Georgian)</label>
-                <input class="text-black text-lg p-2 w-full rounded" type="text" name="title_ka" required>
+                <label class="block mb-2  text-lg text-gray-700" for="quote_ka">Quote (Georgian)</label>
+                <input class="text-black text-lg p-2 w-full rounded" type="text" name="quote_ka" required>
             </div>
             <div class="my-6">
                 <label class="block mb-2  text-lg text-gray-700" for="movie">Choose Movie</label>
