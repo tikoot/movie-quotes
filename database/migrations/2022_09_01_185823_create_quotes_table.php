@@ -17,6 +17,7 @@ return new class extends Migration {
 			$table->foreignId('user_id');
 			$table->foreignId('movie_id');
 			$table->json('quote');
+			$table->string('thumbnail');
 			$table->timestamps();
 		});
 	}
