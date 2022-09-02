@@ -10,7 +10,9 @@ class QuoteController extends Controller
 {
 	public function show(): View
 	{
-		return view('show-quotes');
+		return view('show-quotes', [
+			'quotes' => Quote::all(),
+		]);
 	}
 
 	public function create(): View
