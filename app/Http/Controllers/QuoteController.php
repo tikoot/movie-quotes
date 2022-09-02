@@ -21,7 +21,7 @@ class QuoteController extends Controller
 	public function store(StoreQuoteRequest $request): View
 	{
 		$quote = new Quote();
-
+		$quote->movie_id = $request->movie_id;
 		$quote->setTranslation('quote', 'en', $request->quote_en);
 		$quote->setTranslation('quote', 'ka', $request->quote_ka);
 		$quote->save();

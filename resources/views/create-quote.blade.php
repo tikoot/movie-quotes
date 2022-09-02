@@ -14,7 +14,7 @@
             </div>
             <div class="my-6">
                 <label class="block mb-2  text-lg text-gray-700" for="movie">Choose Movie</label>
-                <select name="category_id" id="category_id" class="text-black text-xl">
+                <select name="movie_id" id="movie_id" class="text-black text-xl">
                     @foreach (\App\Models\Movie::all() as $movie)
                         <option 
                         value="{{ $movie->id }}"
