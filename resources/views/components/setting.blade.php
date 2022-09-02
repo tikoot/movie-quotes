@@ -8,10 +8,10 @@
         <aside class="flex-shrink-0">
             <ul>
                 <li class="my-6 pt-2">
-                    <a href="/movie/show">Movies</a>
+                    <a href="/movies/show">Movies</a>
                 </li>
                 <li class="my-6">
-                    <a href="/quote/show">Quotes</a>
+                    <a href="/quotes/show">Quotes</a>
                 </li>
                 <li class="my-6">
                     <a href="/movie/create">Add Movie</a>
