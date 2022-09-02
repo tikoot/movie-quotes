@@ -25,6 +25,7 @@ Route::post('dashboard', [LoginController::class, 'store'])->name('user.dashboar
 Route::get('movies/show', [MovieController::class, 'show'])->name('movie.show');
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
 Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store');
+Route::get('movies/{movie}', [MovieController::class, 'index'])->name('movie.index');
 
 Route::get('quotes/show', [QuoteController::class, 'show'])->name('quote.show');
 Route::get('quote/create', [QuoteController::class, 'create'])->name('quote.create');

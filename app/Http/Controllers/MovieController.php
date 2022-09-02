@@ -8,6 +8,13 @@ use Illuminate\Contracts\View\View;
 
 class MovieController extends Controller
 {
+	public function index(Movie $movie): View
+	{
+		return view('show-quotes', [
+			'quotes' => $movie->quotes,
+		]);
+	}
+
 	public function create(): View
 	{
 		return view('create-movie');
