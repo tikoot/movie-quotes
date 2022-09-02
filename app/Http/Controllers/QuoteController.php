@@ -10,4 +10,9 @@ class QuoteController extends Controller
 	{
 		return view('create-quote');
 	}
+
+	public function store(): View
+	{
+		return view('create-quote');
+	}
 }
