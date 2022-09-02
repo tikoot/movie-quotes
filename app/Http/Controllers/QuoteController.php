@@ -8,6 +8,11 @@ use Illuminate\Contracts\View\View;
 
 class QuoteController extends Controller
 {
+	public function show(): View
+	{
+		return view('show-quotes');
+	}
+
 	public function create(): View
 	{
 		return view('create-quote');

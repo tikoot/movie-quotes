@@ -11,7 +11,7 @@
                     <a href="/movie/show">Movies</a>
                 </li>
                 <li class="my-6">
-                    <a href="/">Quotes</a>
+                    <a href="/quote/show">Quotes</a>
                 </li>
                 <li class="my-6">
                     <a href="/movie/create">Add Movie</a>
