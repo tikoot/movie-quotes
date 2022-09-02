@@ -15,7 +15,7 @@ class MovieController extends Controller
 
 	public function show(): View
 	{
-		return view('show-movie', [
+		return view('show-movies', [
 			'movies' => Movie::all(),
 		]);
 	}
