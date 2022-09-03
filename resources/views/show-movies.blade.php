@@ -16,7 +16,11 @@
                         <a href="/movies/{{ $movie->id }}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                       </td>
                       <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Delete</a>
+                        <form method="POST" action="/movies/{{ $movie->id }}">
+                          @csrf
+                          @method('DELETE')
+                          <button class="text-black ">Delete</button>
+                        </form>
                       </td>
                     </tr>
                     @endforeach

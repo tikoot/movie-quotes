@@ -28,6 +28,7 @@ Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store
 Route::get('movies/{movie}', [MovieController::class, 'index'])->name('movie.index');
 Route::get('movies/{movie}/edit', [MovieController::class, 'edit'])->name('movie.edit');
 Route::patch('movies/{movie}', [MovieController::class, 'update'])->name('movie.update');
+Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movie.destroy');
 
 Route::get('quotes/show', [QuoteController::class, 'show'])->name('quote.show');
 Route::get('quote/create', [QuoteController::class, 'create'])->name('quote.create');
