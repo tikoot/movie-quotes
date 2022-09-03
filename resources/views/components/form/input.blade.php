@@ -11,8 +11,8 @@
            type="{{ $type }}"
            name="{{ $attr }}" 
            id="{{ $attr }}"
-           value="{{ old($attr) }}"
            required
+           {{ $attributes(['value' => old('attr')])}}
     >
     <x-form.error attr="{{ $attr }}"/>
 </x-form.field>

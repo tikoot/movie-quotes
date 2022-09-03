@@ -24,7 +24,7 @@
                                 <a href="/movies/{{ $quote->movie->id }}" class="text-black ">{{ $quote->movie->title }}</a>
                               </td>
                           <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                            <a href="#" class="text-black ">Edit</a>
+                            <a href="/quotes/{{ $quote->id }}/edit" class="text-black ">Edit</a>
                           </td>
                           <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
                             <a href="#" class="text-black ">Delete</a>
