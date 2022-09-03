@@ -32,3 +32,4 @@ Route::get('quote/create', [QuoteController::class, 'create'])->name('quote.crea
 Route::post('quote/store', [QuoteController::class, 'store'])->name('quote.store');
 Route::get('quotes/{quote}/edit', [QuoteController::class, 'edit'])->name('quote.edit');
 Route::patch('quotes/{quote}', [QuoteController::class, 'update'])->name('quote.update');
+Route::delete('quotes/{quote}', [QuoteController::class, 'destroy'])->name('quote.destroy');

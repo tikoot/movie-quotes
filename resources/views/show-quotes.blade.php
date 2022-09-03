@@ -27,7 +27,11 @@
                             <a href="/quotes/{{ $quote->id }}/edit" class="text-black ">Edit</a>
                           </td>
                           <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
-                            <a href="#" class="text-black ">Delete</a>
+                            <form method="POST" action="/quotes/{{ $quote->id }}">
+                              @csrf
+                              @method('DELETE')
+                              <button class="text-black ">Delete</button>
+                            </form>
                           </td>
                         </tr>
                         @endforeach
