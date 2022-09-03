@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreMovieRequest;
 use App\Models\Movie;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class MovieController extends Controller
 {
@@ -35,5 +36,21 @@ class MovieController extends Controller
 		$movie->save();
 
 		return view('create-movie');
+	}
+
+	public function edit(Movie $movie): View
+	{
+		return view('edit-movie', [
+			'movie' => $movie,
+		]);
+	}
+
+	public function update(Movie $movie, StoreMovieRequest $request): RedirectResponse
+	{
+		$movie->setTranslation('title', 'en', $request->title_en);
+		$movie->setTranslation('title', 'ka', $request->title_ka);
+		$movie->update();
+
+		return redirect()->route('movie.show');
 	}
 }
