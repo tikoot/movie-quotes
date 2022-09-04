@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('login', [LoginController::class, 'create'])->name('login');
-Route::post('dashboard', [LoginController::class, 'store'])->name('user.dashboard');
+Route::get('user/login', [LoginController::class, 'login'])->name('user.login');
+Route::post('user/dashboard', [LoginController::class, 'dashboard'])->name('user.dashboard');
+Route::get('user/logout', [LoginController::class, 'logout'])->name('user.logout');
 
 Route::get('movies/show', [MovieController::class, 'show'])->name('movie.show');
 Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');

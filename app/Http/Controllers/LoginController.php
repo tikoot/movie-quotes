@@ -8,12 +8,12 @@ use Illuminate\Http\RedirectResponse;
 
 class LoginController extends Controller
 {
-	public function create(): View
+	public function login(): View
 	{
 		return view('login');
 	}
 
-	public function store(StorePostRequest $request): View|RedirectResponse
+	public function dashboard(StorePostRequest $request): View|RedirectResponse
 	{
 		$attributes = $request->validated();
 
@@ -26,5 +26,12 @@ class LoginController extends Controller
 
 		return back()
 		->withErrors(['email' => 'Your provided credentials could not be verified.']);
+	}
+
+	public function logout(): RedirectResponse
+	{
+		auth()->logout();
+
+		return redirect()->route('user.login');
 	}
 }
