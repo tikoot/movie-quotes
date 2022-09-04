@@ -13,10 +13,10 @@
                     <tr>
                       <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-black sm:pl-6">	{{ $movie->title }}</td>
                       <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                        <a href="/movies/{{ $movie->id }}/edit" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                        <a href="{{route('movie.edit', ['movie' => $movie->id])}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                       </td>
                       <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
-                        <form method="POST" action="/movies/{{ $movie->id }}">
+                        <form method="POST" action="{{route('movie.destroy', ['movie' => $movie->id])}}">
                           @csrf
                           @method('DELETE')
                           <button class="text-black ">Delete</button>

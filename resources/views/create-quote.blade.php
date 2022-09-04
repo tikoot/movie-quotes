@@ -2,7 +2,7 @@
     <x-header>
     </x-header>
     <x-setting heading="Add Quotes">
-        <form method="POST" action="/quote/store" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('quote.store') }}" enctype="multipart/form-data">
             @csrf
             <x-form.input name="quote (English)" attr="quote_en"/>
             <x-form.input name="quote (Georgian)" attr="quote_ka"/>

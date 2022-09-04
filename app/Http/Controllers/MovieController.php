@@ -28,14 +28,14 @@ class MovieController extends Controller
 		]);
 	}
 
-	public function store(StoreMovieRequest $request): View
+	public function store(StoreMovieRequest $request): RedirectResponse
 	{
 		$movie = new Movie();
 		$movie->setTranslation('title', 'en', $request->title_en);
 		$movie->setTranslation('title', 'ka', $request->title_ka);
 		$movie->save();
 
-		return view('create-movie');
+		return redirect()->route('movie.create');
 	}
 
 	public function edit(Movie $movie): View
