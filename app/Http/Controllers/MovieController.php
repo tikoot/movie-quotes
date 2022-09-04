@@ -11,19 +11,19 @@ class MovieController extends Controller
 {
 	public function index(Movie $movie): View
 	{
-		return view('show-quotes', [
+		return view('quote.show-quotes', [
 			'quotes' => $movie->quotes,
 		]);
 	}
 
 	public function create(): View
 	{
-		return view('create-movie');
+		return view('movie.create-movie');
 	}
 
 	public function show(): View
 	{
-		return view('show-movies', [
+		return view('movie.show-movies', [
 			'movies' => Movie::all(),
 		]);
 	}
@@ -40,7 +40,7 @@ class MovieController extends Controller
 
 	public function edit(Movie $movie): View
 	{
-		return view('edit-movie', [
+		return view('movie.edit-movie', [
 			'movie' => $movie,
 		]);
 	}

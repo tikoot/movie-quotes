@@ -11,14 +11,14 @@ class QuoteController extends Controller
 {
 	public function show(): View
 	{
-		return view('show-quotes', [
+		return view('quote.show-quotes', [
 			'quotes' => Quote::all(),
 		]);
 	}
 
 	public function create(): View
 	{
-		return view('create-quote');
+		return view('quote.create-quote');
 	}
 
 	public function store(StoreQuoteRequest $request): RedirectResponse
@@ -36,7 +36,7 @@ class QuoteController extends Controller
 
 	public function edit(Quote $quote): View
 	{
-		return view('edit-quote', [
+		return view('quote.edit-quote', [
 			'quote' => $quote,
 		]);
 	}
