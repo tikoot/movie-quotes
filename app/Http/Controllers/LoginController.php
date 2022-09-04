@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -13,7 +14,7 @@ class LoginController extends Controller
 		return view('login');
 	}
 
-	public function dashboard(StorePostRequest $request): View|RedirectResponse
+	public function dashboard(StorePostRequest $request): View|ValidationException
 	{
 		$attributes = $request->validated();
 
@@ -24,8 +25,7 @@ class LoginController extends Controller
 			return view('dashboard');
 		}
 
-		return back()
-		->withErrors(['email' => 'Your provided credentials could not be verified.']);
+		throw ValidationException::withMessages(['email' => 'Your provided credentials could not be verified.']);
 	}
 
 	public function logout(): RedirectResponse

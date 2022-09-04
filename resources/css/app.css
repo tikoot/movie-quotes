@@ -6,5 +6,6 @@
 @layer base {
     html {
       font-family: Sansation, sans-serif;
+      background: radial-gradient(#4E4E4E, #3D3B3B, #3D3B3B );
     }
   }
