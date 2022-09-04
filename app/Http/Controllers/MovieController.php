@@ -11,7 +11,8 @@ class MovieController extends Controller
 {
 	public function index(Movie $movie): View
 	{
-		return view('quote.show-quotes', [
+		return view('movie.movie-quotes', [
+			'movie'  => $movie,
 			'quotes' => $movie->quotes,
 		]);
 	}
