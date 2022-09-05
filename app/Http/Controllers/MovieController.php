@@ -36,7 +36,7 @@ class MovieController extends Controller
 		$movie->setTranslation('title', 'ka', $request->title_ka);
 		$movie->save();
 
-		return redirect()->route('movie.create');
+		return redirect()->route('movies.create');
 	}
 
 	public function edit(Movie $movie): View
@@ -52,12 +52,12 @@ class MovieController extends Controller
 		$movie->setTranslation('title', 'ka', $request->title_ka);
 		$movie->update();
 
-		return redirect()->route('movie.show');
+		return redirect()->route('movies.show');
 	}
 
 	public function destroy(Movie $movie): RedirectResponse
 	{
 		$movie->delete();
-		return redirect()->route('movie.show');
+		return redirect()->route('movies.show');
 	}
 }

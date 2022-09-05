@@ -1,7 +1,7 @@
 <x-layout>
     <x-header/>
     <x-setting heading="Update Movie">
-        <form method="POST" action="{{route('movie.update', ['movie' => $movie->id])}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('movies.update', ['movie' => $movie->id])}}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
             @csrf

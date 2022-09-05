@@ -31,7 +31,7 @@ class QuoteController extends Controller
 		$quote->setTranslation('quote', 'ka', $request->quote_ka);
 		$quote->save();
 
-		return redirect()->route('quote.show');
+		return redirect()->route('quotes.show');
 	}
 
 	public function edit(Quote $quote): View
@@ -50,12 +50,12 @@ class QuoteController extends Controller
 
 		$quote->update();
 
-		return redirect()->route('quote.show');
+		return redirect()->route('quotes.show');
 	}
 
 	public function destroy(Quote $quote): RedirectResponse
 	{
 		$quote->delete();
-		return redirect()->route('quote.show');
+		return redirect()->route('quotes.show');
 	}
 }

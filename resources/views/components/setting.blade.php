@@ -8,16 +8,16 @@
         <aside class="flex-shrink-0">
             <ul>
                 <li class="my-6 pt-2">
-                    <a href="{{ route('movie.show') }}">Movies</a>
+                    <a href="{{ route('movies.show') }}">Movies</a>
                 </li>
                 <li class="my-6">
-                    <a href="{{ route('quote.show') }}">Quotes</a>
+                    <a href="{{ route('quotes.show') }}">Quotes</a>
                 </li>
                 <li class="my-6">
-                    <a href="{{ route('movie.create') }}">Add Movie</a>
+                    <a href="{{ route('movies.create') }}">Add Movie</a>
                 </li>
                 <li class="my-6">
-                    <a href="{{ route('quote.create') }}">Add Quote</a>
+                    <a href="{{ route('quotes.create') }}">Add Quote</a>
                 </li>
             </ul>
         </aside>

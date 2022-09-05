@@ -21,13 +21,13 @@
                                 </div>
                               </td>
                               <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                                <a href="{{route('movie.index', ['movie' =>$quote->movie->id])}}" class="text-black ">{{ $quote->movie->title }}</a>
+                                <a href="{{route('movies.index', ['movie' =>$quote->movie->id])}}" class="text-black ">{{ $quote->movie->title }}</a>
                               </td>
                           <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                            <a href="{{route('quote.edit', ['quote' => $quote->id])}}" class="text-black ">Edit</a>
+                            <a href="{{route('quotes.edit', ['quote' => $quote->id])}}" class="text-black ">Edit</a>
                           </td>
                           <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
-                            <form method="POST" action="{{route('quote.destroy', ['quote' => $quote->id])}}">
+                            <form method="POST" action="{{route('quotes.destroy', ['quote' => $quote->id])}}">
                               @csrf
                               @method('DELETE')
                               <button class="text-black ">Delete</button>

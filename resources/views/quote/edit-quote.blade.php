@@ -2,7 +2,7 @@
     <x-header>
     </x-header>
     <x-setting heading="Update Quote">
-        <form method="POST" action="{{ route('quote.update', ['quote' => $quote->id]) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('quotes.update', ['quote' => $quote->id]) }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
             <x-form.input name="quote (English)" attr="quote_en" value="{{$quote->getTranslation('quote','en')}}"/>
