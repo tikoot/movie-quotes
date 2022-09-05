@@ -16,11 +16,6 @@ class QuoteController extends Controller
 		]);
 	}
 
-	public function create(): View
-	{
-		return view('quote.create-quote');
-	}
-
 	public function store(StoreQuoteRequest $request): RedirectResponse
 	{
 		$quote = new Quote();

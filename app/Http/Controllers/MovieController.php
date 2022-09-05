@@ -17,11 +17,6 @@ class MovieController extends Controller
 		]);
 	}
 
-	public function create(): View
-	{
-		return view('movie.create-movie');
-	}
-
 	public function show(): View
 	{
 		return view('movie.show-movies', [

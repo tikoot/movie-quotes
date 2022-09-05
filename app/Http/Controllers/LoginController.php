@@ -8,11 +8,6 @@ use Illuminate\Http\RedirectResponse;
 
 class LoginController extends Controller
 {
-	public function login(): View
-	{
-		return view('user.login');
-	}
-
 	public function dashboard(StorePostRequest $request): View|RedirectResponse
 	{
 		$attributes = $request->validated();
