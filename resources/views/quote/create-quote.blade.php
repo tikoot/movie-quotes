@@ -10,7 +10,7 @@
             <div class="my-6">
                 <label class="block mb-2  text-lg text-gray-700" for="movie">Choose Movie</label>
                 <select name="movie_id" id="movie_id" class="text-black text-xl" required>
-                    @foreach (\App\Models\Movie::all() as $movie)
+                    @foreach ($movies as $movie)
                         <option 
                         value="{{ $movie->id }}"
                         {{ old('movie_id') == $movie->id ? 'selected' : '' }}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreQuoteRequest;
+use App\Models\Movie;
 use App\Models\Quote;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -33,6 +34,13 @@ class QuoteController extends Controller
 	{
 		return view('quote.edit-quote', [
 			'quote' => $quote,
+		]);
+	}
+
+	public function create(): View
+	{
+		return view('quote.create-quote', [
+			'movies' => Movie::all(),
 		]);
 	}
 
