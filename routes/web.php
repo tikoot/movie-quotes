@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\QuoteController;
@@ -17,13 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::view('/', 'index')->name('index');
+Route::view('users/login', 'user.login')->name('users.login');
+Route::view('movies/create', 'movie.create-movie')->name('movies.create');
 
-Route::get('login', [LoginController::class, 'create'])->name('login');
-Route::post('user/dashboard', [LoginController::class, 'store'])->name('user.dashboard');
+Route::post('users/dashboard', [LoginController::class, 'dashboard'])->name('users.dashboard');
+Route::get('users/logout', [LoginController::class, 'logout'])->name('users.logout');
 
-Route::get('movie/dashboard', [MovieController::class, 'index'])->name('movie.dashboard');
-Route::get('movie/create', [MovieController::class, 'create'])->name('movie.create');
-Route::post('movie/store', [MovieController::class, 'store'])->name('movie.store');
+Route::get('movies/show', [MovieController::class, 'show'])->name('movies.show');
+Route::post('movies/store', [MovieController::class, 'store'])->name('movies.store');
+Route::get('movies/{movie}', [MovieController::class, 'index'])->name('movies.index');
+Route::get('movies/{movie}/edit', [MovieController::class, 'edit'])->name('movies.edit');
+Route::patch('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
+Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
 
-Route::get('quote/create', [QuoteController::class, 'create'])->name('quote.create');
+Route::get('quotes/show', [QuoteController::class, 'show'])->name('quotes.show');
+Route::get('quotes/create', [QuoteController::class, 'create'])->name('quotes.create');
+Route::post('quotes/store', [QuoteController::class, 'store'])->name('quotes.store');
+Route::get('quotess/{quote}/edit', [QuoteController::class, 'edit'])->name('quotes.edit');
+Route::patch('quotes/{quote}', [QuoteController::class, 'update'])->name('quotes.update');
+Route::delete('quotes/{quote}', [QuoteController::class, 'destroy'])->name('quotes.destroy');
