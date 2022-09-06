@@ -1,13 +1,13 @@
 @props(['name','attr','type' => 'text'])
 
 <x-form.field>
-    <label class="block mb-2  text-lg text-gray-700" 
+    <label class="block mb-2  text-2xl text-white" 
            for="{{ $attr }}"
     >
-        {{ ucwords($name) }}
+        {{__('translate.' . $name)}}
     </label>
 
-    <input class="text-black text-lg p-2 w-full rounded" 
+    <input class="text-black text-2xl w-full rounded" 
            type="{{ $type }}"
            name="{{ $attr }}" 
            id="{{ $attr }}"

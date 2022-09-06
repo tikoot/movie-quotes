@@ -10,6 +10,13 @@ use Illuminate\Http\RedirectResponse;
 
 class QuoteController extends Controller
 {
+	public function index(): View
+	{
+		return view('index', [
+			'quote' => Quote::all()->random(),
+		]);
+	}
+
 	public function show(): View
 	{
 		return view('quote.show-quotes', [
@@ -33,7 +40,8 @@ class QuoteController extends Controller
 	public function edit(Quote $quote): View
 	{
 		return view('quote.edit-quote', [
-			'quote' => $quote,
+			'quote'  => $quote,
+			'movies' => Movie::all(),
 		]);
 	}
 
