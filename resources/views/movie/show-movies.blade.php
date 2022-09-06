@@ -1,7 +1,7 @@
 <x-layout>
     <x-header>
     </x-header>
-<x-setting heading="{{__('translate.Movies')}}">
+<x-setting heading="{{__('translate.movies')}}">
   <main class="flex-1 pl-6">
     <div class="max-w-7xl max-auto ">
       <div class="px-4 sm:px-6 lg:px-8">
@@ -17,13 +17,13 @@
                           <a href="{{route('movies.index', ['movie' => $movie->id])}}" class="text-black ">{{ $movie->title }}</a>
                           </td>
                         <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                          <a href="{{route('movies.edit', ['movie' => $movie->id])}}" class="text-indigo-600 hover:text-indigo-900">{{__('translate.Edit')}}</a>
+                          <a href="{{route('movies.edit', ['movie' => $movie->id])}}" class="text-indigo-600 hover:text-indigo-900">{{__('translate.edit')}}</a>
                         </td>
                         <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
                           <form method="POST" action="{{route('movies.destroy', ['movie' => $movie->id])}}">
                             @csrf
                             @method('DELETE')
-                            <button class="text-black ">{{__('translate.Delete')}}</button>
+                            <button class="text-black ">{{__('translate.delete')}}</button>
                           </form>
                         </td>
                       </tr>

@@ -1,6 +1,6 @@
 <x-layout>
     <x-header/>
-    <x-setting heading="{{__('translate.Quotes')}}">
+    <x-setting heading="{{__('translate.quotes')}}">
       <main class="flex-1">
         <div class=" max-w-5xl ">
           <div class="px-4 sm:px-6 lg:px-8">
@@ -26,13 +26,13 @@
                                 <a href="{{route('movies.index', ['movie' =>$quote->movie->id])}}" class="text-black ">{{ $quote->movie->title }}</a>
                               </td>
                           <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
-                            <a href="{{route('quotes.edit', ['quote' => $quote->id])}}" class="text-black ">{{__('translate.Edit')}}</a>
+                            <a href="{{route('quotes.edit', ['quote' => $quote->id])}}" class="text-black ">{{__('translate.edit')}}</a>
                           </td>
                           <td class="relative whitespace-nowrap py-4  pr-4 text-right text-sm font-medium sm:pr-6">
                             <form method="POST" action="{{route('quotes.destroy', ['quote' => $quote->id])}}">
                               @csrf
                               @method('DELETE')
-                              <button class="text-black ">{{__('translate.Delete')}}</button>
+                              <button class="text-black ">{{__('translate.delete')}}</button>
                             </form>
                           </td>
                         </tr>
