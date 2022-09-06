@@ -25,4 +25,6 @@ return [
 	'Update_Movie'     => 'ფილმის შეცვლა',
 	'Movie_(English)'  => 'ფილმი (ინგლისურად)',
 	'Movie_(Georgian)' => 'ფილმი (ქართულად)',
+
+	'No_Quotes_yet.Please_check_back_later' => 'ციტატები არ არის, გთხოვთ, გადაამოწმოთ მოგვიანებით',
 ];

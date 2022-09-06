@@ -20,7 +20,7 @@
                     <a href="{{route('movies.index', ['movie' =>$quote->movie->id])}}" class="text-5xl pt-10 text-white underline"> {{ $quote->movie->title }} </a>
                 </div>  
                 @else
-                <p class="text-center text-4xl text-white"> No Quotes yet. Please check back later</p>
+                <p class="text-center text-4xl text-white">{{__('translate.No_Quotes_yet.Please_check_back_later')}}</p>
                 @endif
             </main> 
         </div>

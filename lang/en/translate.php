@@ -25,4 +25,6 @@ return [
 	'Update_Movie'     => 'Update Movie',
 	'Movie_(English)'  => 'Movie (English)',
 	'Movie_(Georgian)' => 'Movie (Georgian)',
+
+	'No_Quotes_yet.Please_check_back_later' => 'No Quotes yet. Please check back later',
 ];
