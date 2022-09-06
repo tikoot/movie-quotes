@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\QuoteController;
@@ -36,3 +37,5 @@ Route::post('quotes/store', [QuoteController::class, 'store'])->name('quotes.sto
 Route::get('quotess/{quote}/edit', [QuoteController::class, 'edit'])->name('quotes.edit');
 Route::patch('quotes/{quote}', [QuoteController::class, 'update'])->name('quotes.update');
 Route::delete('quotes/{quote}', [QuoteController::class, 'destroy'])->name('quotes.destroy');
+
+Route::get('/change-locale/{locale}', [LanguageController::class, 'change'])->name('locale.change');
