@@ -10,6 +10,7 @@
                 </div>
                 </aside>
             <main class="flex-auto"> 
+                 @if($quote->count())
                 <div class="flex flex-col flex-wrap justify-center items-center mt-16">
                     <div class="max-w-2xl overflow-hidden">
                         <img class="w-full rounded-xl" src="{{asset('storage/' . $quote->thumbnail)}}" alt="">
@@ -17,8 +18,11 @@
                         <p class=" px-4 py-16 text-5xl text-center text-white">"{{ $quote->quote }}"</p>
                     </div>
                     <a href="{{route('movies.index', ['movie' =>$quote->movie->id])}}" class="text-5xl pt-10 text-white underline"> {{ $quote->movie->title }} </a>
-                </div>
+                </div>  
+                @else
+                <p class="text-center text-4xl text-white"> No Quotes yet. Please check back later</p>
+                @endif
             </main> 
         </div>
     </section>
-    </x-layout>
+</x-layout>
