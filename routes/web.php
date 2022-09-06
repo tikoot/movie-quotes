@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index')->name('index');
 Route::view('users/login', 'user.login')->name('users.login');
 Route::view('movies/create', 'movie.create-movie')->name('movies.create');
 
@@ -30,6 +29,7 @@ Route::get('movies/{movie}/edit', [MovieController::class, 'edit'])->name('movie
 Route::patch('movies/{movie}', [MovieController::class, 'update'])->name('movies.update');
 Route::delete('movies/{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
 
+Route::get('/', [QuoteController::class, 'index'])->name('index');
 Route::get('quotes/show', [QuoteController::class, 'show'])->name('quotes.show');
 Route::get('quotes/create', [QuoteController::class, 'create'])->name('quotes.create');
 Route::post('quotes/store', [QuoteController::class, 'store'])->name('quotes.store');
