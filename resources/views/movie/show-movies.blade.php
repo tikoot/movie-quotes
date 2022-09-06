@@ -11,7 +11,9 @@
                   <tbody class="divide-y divide-gray-200 bg-white">
                     @foreach($movies as $movie)
                     <tr>
-                      <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-black sm:pl-6">	{{ $movie->title }}</td>
+                      <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-black sm:pl-6">
+                        <a href="{{route('movies.index', ['movie' => $movie->id])}}" class="text-black ">{{ $movie->title }}</a>
+                        </td>
                       <td class="relative whitespace-nowrap py-4 pl-3  text-right text-sm font-medium sm:pr-6">
                         <a href="{{route('movies.edit', ['movie' => $movie->id])}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                       </td>
