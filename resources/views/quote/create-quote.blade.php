@@ -1,14 +1,14 @@
 <x-layout>
     <x-header>
     </x-header>
-    <x-setting heading="Add Quotes">
+    <x-setting heading="{{__('translate.Add_Quotes')}}">
         <form method="POST" action="{{ route('quotes.store') }}" enctype="multipart/form-data">
             @csrf
-            <x-form.input name="quote (English)" attr="quote_en"/>
-            <x-form.input name="quote (Georgian)" attr="quote_ka"/>
-            <x-form.input name="add quote image" attr="thumbnail" type="file"/>
+            <x-form.input name="quote_(English)" attr="quote_en"/>
+            <x-form.input name="quote_(Georgian)" attr="quote_ka"/>
+            <x-form.input name="add_Image" attr="thumbnail" type="file"/>
             <div class="my-6">
-                <label class="block mb-2  text-lg text-gray-700" for="movie">Choose Movie</label>
+                <label class="block mb-2  text-lg text-gray-700" for="movie">{{__('translate.Choose_Movie')}}</label>
                 <select name="movie_id" id="movie_id" class="text-black text-xl" required>
                     @foreach ($movies as $movie)
                         <option 
@@ -19,6 +19,6 @@
                     @endforeach
                 </select>
             </div>
-            <x-form.button name="add quote"/>
+            <x-form.button name="Add"/>
     </x-setting>
 </x-layout>

@@ -4,7 +4,7 @@
     <label class="block mb-2  text-lg text-gray-700" 
            for="{{ $attr }}"
     >
-        {{ ucwords($name) }}
+        {{__('translate.' . ucwords($name))}}
     </label>
 
     <input class="text-black text-lg p-2 w-full rounded" 
