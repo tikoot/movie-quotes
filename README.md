@@ -55,11 +55,17 @@ And now you should provide **.env** file all the necessary environment variables
 #
 **MYSQL:**
 >DB_CONNECTION=mysql
+
 >DB_HOST=127.0.0.1
+
 >DB_PORT=3306
+
 >DB_DATABASE=***
+
 >DB_USERNAME=***
+
 >DB_PASSWORD=***
+
 
 after setting up **.env** file, execute:
 ```sh
@@ -73,7 +79,9 @@ php artisan key:generate
 ```
 Which generates auth key.
 
+#
 **Tailwind:**
+
 5\.Add configured colors under the colors key in the theme section of your tailwind.config.js file:
 ```sh
 theme: {
