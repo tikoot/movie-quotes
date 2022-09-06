@@ -40,7 +40,8 @@ class QuoteController extends Controller
 	public function edit(Quote $quote): View
 	{
 		return view('quote.edit-quote', [
-			'quote' => $quote,
+			'quote'  => $quote,
+			'movies' => Movie::all(),
 		]);
 	}
 
