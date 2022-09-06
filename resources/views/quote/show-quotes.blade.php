@@ -1,16 +1,18 @@
 <x-layout>
     <x-header/>
     <x-setting heading="{{__('translate.Quotes')}}">
-        <div class="px-4 sm:px-6 lg:px-8">
+      <main class="flex-1">
+        <div class=" max-w-5xl ">
+          <div class="px-4 sm:px-6 lg:px-8">
             <div class="mt-8 flex flex-col">
-              <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8 overflow-auto max-h-56">
+              <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6  overflow-auto max-h-96">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                   <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                    <table class="min-w-full divide-y divide-gray-300">
+                    <table class=" min-w-full divide-y divide-gray-300">
                       <tbody class="divide-y divide-gray-200 bg-white">
                         @foreach($quotes as $quote)
                         <tr>
-                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
+                            <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 ">
                                 <div class="flex items-center">
                                   <div class="h-10 w-10 flex-shrink-0">
                                     <img class="h-10 w-10" src="{{asset('storage/' . $quote->thumbnail)}}" alt="">
@@ -42,5 +44,7 @@
               </div>
             </div>
           </div>
+        </main>
+      </div>
     </x-setting>
 </x-layout>
