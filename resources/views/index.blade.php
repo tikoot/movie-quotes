@@ -3,10 +3,10 @@
         <div class="flex items-center justify-center h-screen">
             <aside class="flex-none text-2xl pl-14">
                 <div class="mb-7">
-                    <a href="/change-locale/en" class="rounded-full border-2 px-2 py-2 border-white text-white">en</a>
+                    <a href="{{route('locale.change', ['locale' => 'en'])}}" class="rounded-full border-2 px-2 py-2 border-white text-white">en</a>
                 </div>
                 <div>
-                    <a href="/change-locale/ka" class="rounded-full border-2 bg-white px-2 py-2 border-white text-black">ka</a> 
+                    <a href="{{route('locale.change', ['locale' => 'ka'])}}" class="rounded-full border-2 bg-white px-2 py-2 border-white text-black">ka</a> 
                 </div>
                 </aside>
             <main class="flex-auto"> 
