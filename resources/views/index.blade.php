@@ -19,8 +19,8 @@
                     </div>
                     <a href="{{route('movies.index', ['movie' =>$quote->movie->id])}}" class="text-5xl pt-10 text-white underline"> {{ $quote->movie->title }} </a>
                 </div>  
-                @else
-                <p class="text-center text-4xl text-white">{{__('translate.no_quotes_yet.qlease_check_back_later')}}</p>
+                @elseif($quote->count() == 0)
+                <p class="text-center text-4xl text-white">{{__('translate.no_quotes_yet.please_check_back_later')}}</p>
                 @endif
             </main> 
         </div>
