@@ -26,5 +26,5 @@ return [
 	'movie_(english)'  => 'ფილმი (ინგლისურად)',
 	'movie_(georgian)' => 'ფილმი (ქართულად)',
 
-	'no_quotes_yet.please_check_back_later' => 'ციტატები არ არის, გთხოვთ, გადაამოწმოთ მოგვიანებით',
+	'no_quotes_yet.please_check_back_later' => 'ციტატები არ არის. გთხოვთ, გადაამოწმოთ მოგვიანებით',
 ];
